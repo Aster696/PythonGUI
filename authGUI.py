@@ -39,4 +39,8 @@ class authGUI:
         self.signup_button.pack()
 
     def on_submit(self):
-        print(f'Name: {self.user_name_entry.get()} \nCompany Name: {self.company_name_entry.get()} \nEmail: {self.email_entry.get()} \nPassword: {self.password_entry.get()}')
+        print(f'Name: {self.user_name_entry.get()} 
+              \nCompany Name: {self.company_name_entry.get()} 
+              \nEmail: {self.email_entry.get()} 
+              \nPassword: {self.password_entry.get()}'
+            )
