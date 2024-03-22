@@ -1,11 +1,14 @@
 from tkinter import *
+from authGUI import *
+
 class Main:
 
     def __init__(self):
         self.root = Tk()
-        self.root.title("Main menu")
+        self.root.title("Salary Manager")
         self.root.geometry("400x300")
         self.menu()
+        self.authform = authGUI(self.root)
 
     def menu(self):
         menubar = Menu(self.root)
@@ -20,14 +23,16 @@ class Main:
         self.create_btn()
     
     def create_btn(self):
-        signup_button = Button(self.root, text="Signup", command=self.open_signup)
-        signup_button.pack(pady=10)
-        login_button = Button(self.root, text='Login', command=self.open_login)
-        login_button.pack(pady=10)
+        self.signup_button = Button(self.root, text="Signup", command=self.open_signup)
+        self.signup_button.pack(pady=10)
+        self.login_button = Button(self.root, text='Login', command=self.open_login)
+        self.login_button.pack(pady=10)
 
     def open_signup(self):
         # Implement the signup logic here
-        print("Opening signup page")
+        self.signup_button.pack_forget()
+        self.login_button.pack_forget()
+        self.authform.sign_up_form()
 
     def open_login(self):
         # Implement the login logic here
