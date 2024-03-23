@@ -4,7 +4,7 @@ class authGUI:
     def __init__(self, root):
         self.root = root
         self.frame = Frame(self.root)
-        self.user_name_entry = Entry(self.frame, placeholder='Enter your name')  # Define and initialize user_name_entry
+        self.user_name_entry = Entry(self.frame)  # Define and initialize user_name_entry
         self.company_name_entry = Entry(self.frame)  # Define and initialize company_name_entry
         self.email_entry = Entry(self.frame)  # Define and initialize email_entry
         self.password_entry = Entry(self.frame)
