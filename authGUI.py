@@ -1,12 +1,13 @@
 from tkinter import *
+from PlaceholderEntry import PlaceholderEntry
 
 class authGUI:
     def __init__(self, root):
         self.root = root
         self.frame = Frame(self.root)
-        self.user_name_entry = Entry(self.frame)  # Define and initialize user_name_entry
-        self.company_name_entry = Entry(self.frame)  # Define and initialize company_name_entry
-        self.email_entry = Entry(self.frame)  # Define and initialize email_entry
+        self.user_name_entry = PlaceholderEntry(self.frame, placeholder='Enter your name', fg='grey')
+        self.company_name_entry = Entry(self.frame) 
+        self.email_entry = Entry(self.frame) 
         self.password_entry = Entry(self.frame)
 
     def sign_up_form(self):
